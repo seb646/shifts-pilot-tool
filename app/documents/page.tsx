@@ -1,0 +1,100 @@
+import { createClient } from '@/lib/supabase/server'
+import { redirect } from 'next/navigation'
+import AdminNav from '../dashboard/AdminNav'
+import DeleteButton from './DeleteButton'
+import UploadForm from './UploadForm'
+
+export default async function DocumentsPage() {
+  const supabase = await createClient()
+  const { data: { user } } = await supabase.auth.getUser()
+
+  if (!user) redirect('/login')
+
+  const { data: rows } = await supabase
+    .from('documents')
+    .select('id, filename, storage_path, created_at')
+    .order('created_at', { ascending: false })
+
+  const documents = await Promise.all(
+    (rows ?? []).map(async (doc) => {
+      const { data: signed } = await supabase.storage
+        .from('pdfs')
+        .createSignedUrl(doc.storage_path, 60 * 60)
+
+      return { ...doc, url: signed?.signedUrl ?? null }
+    })
+  )
+
+  return (
+    <main className="h-screen">
+        <div className="flex items-start h-full">
+
+            <AdminNav />
+
+            <div className="w-full h-full">
+                <header
+                    className="flex py-2 sticky top-0 w-full bg-white border-b border-slate-300 px-12 min-h-[68px] z-20"
+                    aria-label="header">
+                    <div className="flex flex-wrap items-center gap-4 w-full">
+                        <h1 className="text-xl text-slate-900 font-bold">Documents</h1>
+
+                        <div className="flex items-center flex-wrap gap-5 ml-auto">
+                            <form action="/auth/signout" method="post">
+                                <button className="font-bold text-red-600" type="submit">
+                                Log out
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </header>
+
+                <section className="p-12">
+                    <div className="border border-slate-200 rounded p-6 mb-12 bg-slate-50">
+                        <UploadForm />
+                    </div>
+                    {documents.length === 0 ? (
+                        <p className="text-gray-600">No documents have been uploaded yet.</p>
+                    ) : (
+                        <table className="w-full text-left border-collapse">
+                            <thead>
+                                <tr className="border-b border-slate-300">
+                                    <th className="py-2 pr-4 text-sm font-semibold text-slate-900">Filename</th>
+                                    <th className="py-2 pr-4 text-sm font-semibold text-slate-900">Uploaded</th>
+                                    <th className="py-2 pr-4 text-sm font-semibold text-slate-900"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {documents.map((doc) => (
+                                    <tr key={doc.id} className="border-b border-slate-200">
+                                        <td className="py-2 pr-4 text-sm text-slate-900 max-w-xs" title={doc.filename}>
+                                            {doc.url ? (
+                                                <a
+                                                    href={doc.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="block truncate hover:underline text-[#4e4e9c] focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
+                                                >
+                                                    {doc.filename}
+                                                </a>
+                                            ) : (
+                                                <span className="block truncate">{doc.filename}</span>
+                                            )}
+                                        </td>
+                                        <td className="py-2 pr-4 text-sm text-slate-600">
+                                            {new Date(doc.created_at).toLocaleString()}
+                                        </td>
+                                        <td className="py-2 pr-4 text-right">
+                                            <DeleteButton id={doc.id} filename={doc.filename} />
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    )}
+                </section>
+            </div>
+
+        </div>
+    </main>
+  )
+}
