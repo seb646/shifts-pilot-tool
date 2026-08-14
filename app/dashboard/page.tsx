@@ -36,7 +36,7 @@ export default async function DashboardPage() {
 
                 <section className="p-12">
                     <div>
-                        <p className="text-gray-600 mb-4">Logged in as {user.email}</p>
+                        <p className="text-gray-600 mb-4">Logged in as <a href="/profile" className="text-[#4e4e9c] font-semibold hover:underline">{user.email}</a></p>
                     </div>
                 </section>
             </div>

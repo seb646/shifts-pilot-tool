@@ -94,7 +94,7 @@ export default function ProfileForm({ email, name }: { email: string; name: stri
             value={profileName}
             onChange={(e) => setProfileName(e.target.value)}
             placeholder="Your name"
-            className="border border-slate-300 rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-500"
+            className="border border-slate-300 rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#4e4e9c]"
           />
         </div>
 
@@ -106,7 +106,7 @@ export default function ProfileForm({ email, name }: { email: string; name: stri
             value={profileEmail}
             onChange={(e) => setProfileEmail(e.target.value)}
             required
-            className="border border-slate-300 rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-500"
+            className="border border-slate-300 rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#4e4e9c]"
           />
         </div>
 
@@ -114,7 +114,7 @@ export default function ProfileForm({ email, name }: { email: string; name: stri
           <button
             type="submit"
             disabled={savingProfile}
-            className="bg-[#1a1a2e] text-white text-sm font-medium px-4 py-2 rounded-md hover:opacity-90 transition-opacity disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 cursor-pointer"
+            className="bg-[#4e4e9c] text-white text-sm font-medium px-4 py-2 rounded-md hover:opacity-80 transition-opacity disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4e4e9c] cursor-pointer"
           >
             {savingProfile ? 'Saving...' : 'Save changes'}
           </button>
@@ -137,7 +137,7 @@ export default function ProfileForm({ email, name }: { email: string; name: stri
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
             placeholder="At least 6 characters"
-            className="border border-slate-300 rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-500"
+            className="border border-slate-300 rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#4e4e9c]"
           />
         </div>
 
@@ -148,7 +148,7 @@ export default function ProfileForm({ email, name }: { email: string; name: stri
             type="password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-            className="border border-slate-300 rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-500"
+            className="border border-slate-300 rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#4e4e9c]"
           />
         </div>
 
@@ -156,7 +156,7 @@ export default function ProfileForm({ email, name }: { email: string; name: stri
           <button
             type="submit"
             disabled={savingPassword}
-            className="border border-slate-300 text-slate-700 text-sm font-medium px-4 py-2 rounded-md hover:bg-slate-50 transition-colors disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 cursor-pointer"
+            className="border border-slate-300 text-slate-700 text-sm font-medium px-4 py-2 rounded-md hover:bg-slate-100 transition-colors disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4e4e9c] cursor-pointer"
           >
             {savingPassword ? 'Saving...' : 'Update password'}
           </button>

@@ -32,7 +32,7 @@ export default function LoginPage() {
   return (
     <main className="min-h-screen flex items-center justify-center bg-[#1a1a2e] px-4">
       <div className="w-full max-w-sm">
-        <div className="flex flex-col items-center gap-10 mb-8">
+        <div className="flex flex-col items-center gap-10 mb-10">
           <img
             src="https://www.toronto-tide.ca/wp-content/uploads/2026/06/toronto-tide-1.svg"
             alt="logo"
@@ -53,7 +53,7 @@ export default function LoginPage() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="border border-slate-300 rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-500"
+                className="border border-slate-300 rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#4e4e9c]"
                 required
               />
             </div>
@@ -65,7 +65,7 @@ export default function LoginPage() {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="border border-slate-300 rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-500"
+                className="border border-slate-300 rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#4e4e9c]"
                 required
               />
             </div>
@@ -75,7 +75,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="bg-[#1a1a2e] text-white text-sm font-medium px-4 py-2 rounded-md hover:opacity-90 transition-opacity disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 cursor-pointer mt-2"
+              className="bg-[#1a1a2e] text-white text-sm font-medium px-4 py-2 rounded-md hover:opacity-90 transition-opacity disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4e4e9c] cursor-pointer mt-2"
             >
               {loading ? 'Logging in...' : 'Log in'}
             </button>

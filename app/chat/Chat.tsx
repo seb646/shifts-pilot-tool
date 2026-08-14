@@ -138,7 +138,7 @@ export default function Chat() {
 
       <div className="max-w-3xl w-full mx-auto pt-2">
         {error && <p className="text-red-600 mb-2">{error}</p>}
-        <form onSubmit={handleSubmit} className="flex items-center gap-2 bg-white border border-slate-300 rounded-full px-2 py-1.5 shadow-sm focus-within:ring-2 focus-within:ring-blue-500">
+        <form onSubmit={handleSubmit} className="flex items-center gap-2 bg-white border border-slate-300 rounded-full px-2 py-1.5 shadow-sm focus-within:ring-2 focus-within:ring-[#4e4e9c]">
           <input
             type="text"
             value={input}
@@ -150,7 +150,7 @@ export default function Chat() {
             type="submit"
             disabled={loading || !input.trim()}
             aria-label="Send message"
-            className="size-9 shrink-0 rounded-full bg-[#1a1a2e] text-white flex items-center justify-center hover:opacity-90 transition-opacity disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
+            className="size-9 shrink-0 rounded-full bg-[#4e4e9c] text-white flex items-center justify-center hover:opacity-90 transition-opacity disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="size-5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 19V5m0 0-6 6m6-6 6 6" />

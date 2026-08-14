@@ -54,7 +54,7 @@ export default function CreateUserForm() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Optional"
-          className="border border-slate-300 rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-500"
+          className="border border-slate-300 rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#4e4e9c]"
         />
       </div>
 
@@ -66,7 +66,7 @@ export default function CreateUserForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="border border-slate-300 rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-500"
+          className="border border-slate-300 rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#4e4e9c]"
         />
       </div>
 
@@ -79,7 +79,7 @@ export default function CreateUserForm() {
           onChange={(e) => setPassword(e.target.value)}
           placeholder="At least 6 characters"
           required
-          className="border border-slate-300 rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-500"
+          className="border border-slate-300 rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-[#4e4e9c]"
         />
       </div>
 
@@ -87,7 +87,7 @@ export default function CreateUserForm() {
         <button
           type="submit"
           disabled={creating}
-          className="bg-[#1a1a2e] text-white text-sm font-medium px-4 py-2 rounded-md hover:opacity-90 transition-opacity disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 cursor-pointer"
+          className="bg-[#4e4e9c] text-white text-sm font-medium px-4 py-2 rounded-md hover:opacity-90 transition-opacity disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4e4e9c] cursor-pointer"
         >
           {creating ? 'Creating...' : 'Create user'}
         </button>

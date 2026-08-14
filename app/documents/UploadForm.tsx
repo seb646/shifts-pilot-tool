@@ -56,7 +56,7 @@ export default function UploadForm() {
         <button
           type="button"
           onClick={() => fileInputRef.current?.click()}
-          className="shrink-0 border border-slate-300 text-slate-700 text-sm font-medium px-4 py-2 rounded-md hover:bg-slate-50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 cursor-pointer"
+          className="shrink-0 border border-slate-300 text-slate-700 text-sm font-medium px-4 py-2 rounded-md hover:bg-slate-200 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 cursor-pointer"
         >
           Choose file
         </button>
@@ -69,7 +69,7 @@ export default function UploadForm() {
         <button
           type="submit"
           disabled={uploading}
-          className="bg-[#1a1a2e] text-white text-sm font-medium px-4 py-2 rounded-md hover:opacity-90 transition-opacity disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 cursor-pointer"
+          className="bg-[#4e4e9c] text-white text-sm font-medium px-4 py-2 rounded-md hover:opacity-80 transition-opacity disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 cursor-pointer"
         >
           {uploading ? 'Uploading...' : 'Upload PDF'}
         </button>

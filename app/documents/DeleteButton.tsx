@@ -27,7 +27,7 @@ export default function DeleteButton({ id, filename }: { id: string; filename: s
     <button
       onClick={handleDelete}
       disabled={deleting}
-      className="text-sm text-red-600 font-medium hover:underline disabled:opacity-50"
+      className="text-sm text-red-600 font-medium hover:underline disabled:opacity-50 cursor-pointer"
     >
       {deleting ? 'Deleting...' : 'Delete'}
     </button>
