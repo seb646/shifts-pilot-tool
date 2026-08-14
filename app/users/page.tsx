@@ -41,7 +41,7 @@ export default async function UsersPage() {
                 </header>
 
                 <section className="p-12 flex flex-col gap-12">
-                    <div className="border border-slate-200 rounded p-6 bg-slate-50">
+                    <div className="border border-slate-200 rounded-lg p-6 bg-slate-50">
                         <CreateUserForm />
                     </div>
 

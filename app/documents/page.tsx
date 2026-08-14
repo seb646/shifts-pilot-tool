@@ -52,7 +52,7 @@ export default async function DocumentsPage() {
                 </header>
 
                 <section className="p-12">
-                    <div className="border border-slate-200 rounded p-6 mb-12 bg-slate-50">
+                    <div className="border border-slate-200 rounded-lg p-6 mb-12 bg-slate-50">
                         <UploadForm />
                     </div>
                     {documents.length === 0 ? (

@@ -38,7 +38,7 @@ export default function LoginPage() {
             alt="logo"
             className="w-80"
           />
-          <span className="font-heading text-lg font-bold text-white">SHIFTS Project</span>
+          <span className="sr-only">Toronto Initiative for Diversity & Excellence</span>
         </div>
 
         <div className="bg-white border border-slate-200 rounded-lg shadow-sm p-8">

@@ -15,13 +15,13 @@ export default async function AdminNav() {
                     <a href="#"
                         className="min-h-9 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded gap-8 flex flex-col">
                         <img src="https://www.toronto-tide.ca/wp-content/uploads/2026/06/toronto-tide-1.svg" alt="logo"
-                            className="w-full block mb-4" />
+                            className="w-full block" />
                         <span className="sr-only">Toronto Initiative for Diversity & Excellence</span>
                     </a>
                     </div>
 
                     <nav className="flex-1" aria-label="Primary sidebar navigation">
-                        <div className="text-white font-heading text-lg font-bold mb-4">SHIFTS Project</div>
+                        <div className="text-white font-heading text-lg font-bold mb-4 mt-4">SHIFTS Project</div>
                     <ul className="space-y-2 text-base text-white font-bold">
                         <li>
                             <a href="/dashboard"
@@ -49,7 +49,7 @@ export default async function AdminNav() {
                                 <span>Survey</span>
                             </a>
                         </li> */}
-                        <li>
+                        {/* <li>
                             <a href="/chat"
                                 className="flex items-center gap-2.5 hover:text-slate-900 hover:bg-slate-100 rounded-md px-3 py-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
@@ -59,7 +59,7 @@ export default async function AdminNav() {
 
                                 <span>Chat</span>
                             </a>
-                        </li>
+                        </li> */}
                         <li>
                             <a href="/documents"
                                 className="flex items-center gap-2.5 hover:text-slate-900 hover:bg-slate-100 rounded-md px-3 py-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
@@ -70,7 +70,7 @@ export default async function AdminNav() {
                                 <span>Documents</span>
                             </a>
                         </li>
-                        <li>
+                        {/* <li>
                             <a href="/users"
                                 className="flex items-center gap-2.5 hover:text-slate-900 hover:bg-slate-100 rounded-md px-3 py-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
@@ -79,7 +79,7 @@ export default async function AdminNav() {
 
                                 <span>Users</span>
                             </a>
-                        </li>
+                        </li> */}
                         {/* <li>
                             <a href="#"
                                 className="flex items-center gap-2.5 hover:text-slate-900 hover:bg-slate-100 rounded-md px-3 py-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
@@ -100,7 +100,7 @@ export default async function AdminNav() {
                     </ul>
                     </nav>
 
-                    <a href="/profile"
+                    {/* <a href="/profile"
                     className="flex flex-wrap items-center gap-4 rounded-md mt-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
                     <div>
                         <p className="text-white font-bold">
@@ -110,7 +110,7 @@ export default async function AdminNav() {
                         </p>
                         <p className="text-sm text-slate-400 mt-0.5">{user?.email}</p>
                     </div>
-                    </a>
+                    </a> */}
                 </div>
             </aside>
   )
