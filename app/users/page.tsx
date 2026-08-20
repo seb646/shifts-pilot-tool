@@ -22,7 +22,7 @@ export default async function UsersPage() {
 
             <div className="w-full h-full">
                 <header
-                    className="flex py-2 sticky top-0 w-full bg-[#f4f4f8] border-b border-slate-300 px-12 min-h-[68px] z-20"
+                    className="flex py-2 sticky top-0 w-full border-b border-slate-300 px-12 min-h-[68px] z-20"
                     aria-label="header">
                     <div className="flex flex-wrap items-center gap-4 w-full">
                         <h1 className="text-xl text-slate-900 font-bold">Users</h1>
