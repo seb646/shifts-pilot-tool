@@ -49,7 +49,7 @@ export default async function AdminNav() {
                                 <span>Survey</span>
                             </a>
                         </li> */}
-                        {/* <li>
+                        <li>
                             <a href="/chat"
                                 className="flex items-center gap-2.5 hover:text-slate-900 hover:bg-slate-100 rounded-md px-3 py-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4e4e9c]">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
@@ -59,7 +59,7 @@ export default async function AdminNav() {
 
                                 <span>Chat</span>
                             </a>
-                        </li> */}
+                        </li>
                         <li>
                             <a href="/documents"
                                 className="flex items-center gap-2.5 hover:text-white hover:bg-[#4e4e9c] rounded-md px-3 py-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4e4e9c]">
@@ -70,7 +70,7 @@ export default async function AdminNav() {
                                 <span>Documents</span>
                             </a>
                         </li>
-                        {/* <li>
+                        <li>
                             <a href="/users"
                                 className="flex items-center gap-2.5 hover:text-white hover:bg-[#4e4e9c] rounded-md px-3 py-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4e4e9c]">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
@@ -79,7 +79,7 @@ export default async function AdminNav() {
 
                                 <span>Users</span>
                             </a>
-                        </li> */}
+                        </li>
                         {/* <li>
                             <a href="#"
                                 className="flex items-center gap-2.5 hover:text-white hover:bg-[#4e4e9c] rounded-md px-3 py-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4e4e9c]">

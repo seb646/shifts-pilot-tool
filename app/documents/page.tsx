@@ -75,7 +75,7 @@ export default async function DocumentsPage() {
                                                     href={doc.url}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="block truncate hover:underline text-[#4e4e9c] focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
+                                                    className="block truncate hover:underline text-[#4e4e9c] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4e4e9c] rounded"
                                                 >
                                                     {doc.filename}
                                                 </a>
